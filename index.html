@@ -12,6 +12,9 @@
 
   <!-- Canonical & Favicon -->
   <link rel="canonical" href="https://gennadijvaliev02-design.github.io/sofia/">
+  <link rel="alternate" hreflang="ru" href="https://gennadijvaliev02-design.github.io/sofia/">
+  <link rel="alternate" hreflang="en" href="https://gennadijvaliev02-design.github.io/sofia/en.html">
+  <link rel="alternate" hreflang="x-default" href="https://gennadijvaliev02-design.github.io/sofia/">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
   <!-- Open Graph / Meta for Social Networks -->
@@ -29,6 +32,61 @@
   <meta name="twitter:image" content="https://gennadijvaliev02-design.github.io/sofia/assets/images/og-image.jpg">
 
   <link rel="stylesheet" href="css/style.css">
+  <style>
+/* ---------------- Language Switcher ---------------- */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--brown);
+  line-height: 1;
+  text-decoration: none;
+}
+
+.lang-link {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.lang-link:hover {
+  color: var(--deep);
+}
+
+.lang-link.active {
+  color: var(--deep);
+  font-weight: 800;
+  pointer-events: none;
+}
+
+.lang-sep {
+  color: var(--line);
+  font-size: 10px;
+}
+
+@media (max-width: 800px) {
+  .nav-right {
+    gap: 8px;
+  }
+  .lang-switch {
+    padding: 4px 8px;
+    font-size: 10px;
+    gap: 3px;
+  }
+}
+</style>
 </head>
 <body>
   <div class="topline">Косметология · Кисловодск</div>
@@ -43,7 +101,14 @@
         <a href="#works">Работы</a>
         <a href="#prices">Прайс</a>
       </div>
-      <a class="nav-cta" href="#booking">Записаться</a>
+      <div class="nav-right">
+        <div class="lang-switch" role="navigation" aria-label="Язык / Language">
+          <span class="lang-link active" aria-current="page">RU</span>
+          <span class="lang-sep">/</span>
+          <a href="en.html" class="lang-link" title="English version">EN</a>
+        </div>
+        <a class="nav-cta" href="#booking">Записаться</a>
+      </div>
     </nav>
   </header>
 
@@ -457,6 +522,11 @@
       <div>
         <a class="brand" href="#home">Sophia Sots<small>cosmetology</small></a>
         <p class="footer-meta">Профессиональная косметология · г. Кисловодск</p>
+        <div class="lang-switch" role="navigation" aria-label="Язык / Language" style="margin-top:10px">
+          <span class="lang-link active" aria-current="page">RU</span>
+          <span class="lang-sep">/</span>
+          <a href="en.html" class="lang-link">EN</a>
+        </div>
       </div>
       <div class="footer-links">
         <a href="#about">Обо мне</a>
